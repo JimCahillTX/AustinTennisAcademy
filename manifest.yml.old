@@ -1,0 +1,17 @@
+--- 
+applications: 
+  .: 
+    mem: 128M
+    services: 
+      mysql-2acec: 
+        type: mysql
+    infra: aws
+    framework: 
+      name: php
+      info: 
+        mem: 128M
+        description: PHP Application
+        exec: 
+    name: AustinTennisAcademy
+    url: ${name}.${target-base}
+    instances: 1

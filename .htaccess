@@ -1,0 +1,11 @@
+AuthType Basic
+AuthName "Remember to set a Username and Password in .htpasswd"
+AuthUserFile ../app/.htpasswd
+Require valid-user
+SetEnvIf Request_URI "tournament.php$" allow
+SetEnvIf Request_URI "/tennis/$" allow
+Order allow,deny
+Allow from env=allow
+Satisfy any
+
+
